@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
 import sys
-import MySQLdb
-from threading import Thread
-import threading
-import time
-import RPi.GPIO as GPIO
-import json
-from random import randint
-from evdev import InputDevice
-from select import select
-from twilio.rest import Client
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
