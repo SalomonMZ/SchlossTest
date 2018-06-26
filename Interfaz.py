@@ -60,41 +60,6 @@ class Fullscreen_Window:
 			self.btn[count].grid_forget()
 			count += 1
 		
-	def returnToIdle_fromPINentry(self):
-		self.pin_entry_forget()
-		self.show_idle()
-		
-	def returnToIdle_fromPINentered(self):
-		self.PINresultLabel.grid_forget()
-		self.show_idle()
-		
-	def returnToIdle_fromAccessGranted(self):
-		GPIO.output(13,GPIO.LOW)
-		self.SMSresultLabel.grid_forget()
-		self.show_idle()
-		
-	def returnToIdle_fromSMSentry(self):
-		self.PINresultLabel.grid_forget()
-		self.smsDigitsLabel.grid_forget()
-		count = 0
-		while (count < 12):
-			self.btn[count].grid_forget()
-			count += 1
-		self.show_idle()
-		
-	def	returnToIdle_fromSMSentered(self):
-		self.SMSresultLabel.grid_forget()
-		self.show_idle()
-	
-	def toggle_fullscreen(self, event=None):
-		self.state = not self.state  # Just toggling the boolean
-		self.tk.attributes("-fullscreen", self.state)
-		return "break"
-
-	def end_fullscreen(self, event=None):
-		self.state = False
-		self.tk.attributes("-fullscreen", False)
-		return "break"
 	
 if __name__ == '__main__':
 	w = Fullscreen_Window()
