@@ -95,3 +95,7 @@ class Fullscreen_Window:
 		self.state = False
 		self.tk.attributes("-fullscreen", False)
 		return "break"
+	
+if __name__ == '__main__':
+	w = Fullscreen_Window()
+	w.tk.mainloop()
