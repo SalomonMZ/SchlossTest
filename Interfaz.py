@@ -36,10 +36,6 @@ class Fullscreen_Window:
 		self.tk.attributes('-zoomed', True)
 		self.tk.attributes('-fullscreen', True)
 		self.state = True
-		self.tk.bind("<F11>", self.toggle_fullscreen)
-		self.tk.bind("<Escape>", self.end_fullscreen)
-		self.tk.config(cursor="none")
-		
 		self.show_idle()
 		
 		t = Thread(target=self.listen_rfid)
