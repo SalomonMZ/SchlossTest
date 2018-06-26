@@ -38,10 +38,6 @@ class Fullscreen_Window:
 		self.state = True
 		self.show_idle()
 		
-		t = Thread(target=self.listen_rfid)
-		t.daemon = True
-		t.start()
-		
 	def show_idle(self):
 		self.welcomeLabel = ttk.Label(self.tk, text="Please Present\nYour Token")
 		self.welcomeLabel.config(font='size, 20', justify='center', anchor='center')
